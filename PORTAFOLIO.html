@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Estudiantil - Kalashnikov Bello Gómez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        uasdBlue: '#003b73',
+                        uasdGold: '#f3b211',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { animation: fadeIn 1s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-uasdBlue text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-graduation-cap text-uasdGold text-2xl mr-2"></i>
+                    <span class="font-bold text-xl tracking-wider">Portafolio Digital</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#portada" class="hover:text-uasdGold transition duration-300">Portada</a>
+                    <a href="#introduccion" class="hover:text-uasdGold transition duration-300">Introducción</a>
+                    <a href="#trabajos" class="hover:text-uasdGold transition duration-300">Trabajos</a>
+                    <a href="#conclusion" class="hover:text-uasdGold transition duration-300">Conclusión</a>
+                    <a href="#experiencia" class="hover:text-uasdGold transition duration-300">Experiencia</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-uasdGold focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-uasdBlue pb-4 px-4">
+            <a href="#portada" class="block py-2 hover:text-uasdGold">Portada</a>
+            <a href="#introduccion" class="block py-2 hover:text-uasdGold">Introducción</a>
+            <a href="#trabajos" class="block py-2 hover:text-uasdGold">Trabajos</a>
+            <a href="#conclusion" class="block py-2 hover:text-uasdGold">Conclusión</a>
+            <a href="#experiencia" class="block py-2 hover:text-uasdGold">Experiencia</a>
+        </div>
+    </nav>
+
+    <!-- PORTADA -->
+    <header id="portada" class="bg-white min-h-[80vh] flex items-center justify-center fade-in border-b-4 border-uasdGold">
+        <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+            <div class="mb-8 inline-block p-6 rounded-full bg-blue-50">
+                <i class="fas fa-book-reader text-6xl text-uasdBlue"></i>
+            </div>
+            <h2 class="text-sm md:text-base font-semibold text-gray-500 uppercase tracking-widest mb-2">Universidad Autónoma de Santo Domingo (UASD)</h2>
+            <h3 class="text-md md:text-lg font-medium text-uasdBlue mb-6">Facultad de Ciencias de la Educación</h3>
+            
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Portafolio de la Asignatura
+            </h1>
+            
+            <div class="bg-gray-100 rounded-xl p-6 inline-block text-left shadow-sm border border-gray-200 w-full md:w-auto">
+                <p class="text-lg mb-2"><i class="fas fa-user-graduate w-6 text-uasdGold"></i> <strong>Estudiante:</strong> Kalashnikov Bello Gómez (100085476)</p>
+                <p class="text-lg mb-2"><i class="fas fa-chalkboard-teacher w-6 text-uasdGold"></i> <strong>Maestra:</strong> Anny B. Fernández Acosta</p>
+                <p class="text-lg mb-2"><i class="fas fa-laptop-code w-6 text-uasdGold"></i> <strong>Asignatura:</strong> BIT-2120, Didáctica de la Práctica Docente en Informática Educativa I</p>
+                <p class="text-lg"><i class="fas fa-users w-6 text-uasdGold"></i> <strong>Sección:</strong> W01</p>
+            </div>
+            
+            <div class="mt-12">
+                <a href="#introduccion" class="inline-block bg-uasdBlue text-white font-semibold py-3 px-8 rounded-full hover:bg-blue-800 transition shadow-lg hover:shadow-xl">
+                    Comenzar Recorrido <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTRODUCCIÓN -->
+    <section id="introduccion" class="py-20 bg-gray-50 fade-in">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex items-center mb-10">
+                <div class="w-12 h-12 bg-uasdGold rounded-lg flex items-center justify-center text-white text-2xl mr-4 shadow-md">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">Introducción</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold text-uasdBlue mb-4"><i class="fas fa-folder-open mr-2"></i>¿Qué es este portafolio?</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Este portafolio digital es una recopilación sistemática e interactiva de todos los trabajos, reflexiones y aprendizajes construidos durante el desarrollo de la asignatura <strong>Didáctica de la Práctica Docente en Informática Educativa I</strong>.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Está organizado de manera secuencial, reflejando cronológicamente mi evolución desde los conceptos iniciales sobre cómo enseñar informática, pasando por el análisis del currículo dominicano, hasta llegar al dominio de la planificación educativa estructurada. Su importancia radica en que sirve como evidencia palpable de las competencias adquiridas y como instrumento de autoevaluación.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold text-uasdBlue mb-4"><i class="fas fa-lightbulb mr-2"></i>Mis Expectativas Iniciales</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Al iniciar la asignatura, mi principal expectativa era <strong>comprender a fondo cómo traducir los conocimientos técnicos de informática al lenguaje pedagógico</strong>. Esperaba aprender a planificar correctamente, entender la Adecuación Curricular del Nivel Primario y Secundario, y conocer las estrategias metodológicas más efectivas para captar la atención de los estudiantes modernos.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        También esperaba lograr un manejo adecuado de los recursos didácticos y normativas del MINERD, superando cualquier deficiencia teórica que tuviera sobre la labor docente en las aulas dominicanas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRABAJOS (ÍNDICE Y CONTENIDO) -->
+    <section id="trabajos" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Índice y Presentación de Trabajos</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-lg">Recorrido cronológico de las asignaciones desarrolladas desde la Unidad 1 hasta la Unidad 7.</p>
+            </div>
+
+            <!-- Grid de Unidades -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- UNIDAD 1 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 card-hover transition duration-300 flex flex-col h-full">
+                    <div class="bg-uasdBlue text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-md inline-block self-start mb-4">Unidad 1</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Relatoría y Enseñanza de la Informática</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Reflexión sobre los métodos de enseñanza basados en una entrevista docente y relatoría de clases.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Qué es:</span> Análisis de la realidad del aula interactuando con un docente activo (Prof. Edison Peña).</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Materiales:</span> Microsoft Word, Instrumento de entrevista.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Propósito:</span> Diagnosticar cómo se enseña informática en la práctica real y crear registro de clases.</div>
+                    </div>
+                    <button onclick="openModal('Unidad 1')" class="w-full bg-white border-2 border-uasdBlue text-uasdBlue font-semibold py-2 rounded-lg hover:bg-uasdBlue hover:text-white transition">
+                        <i class="fas fa-link mr-2"></i>Ver Documentos
+                    </button>
+                </div>
+
+                <!-- UNIDAD 2 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 card-hover transition duration-300 flex flex-col h-full">
+                    <div class="bg-uasdBlue text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-md inline-block self-start mb-4">Unidad 2</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Diseño Instruccional y TIC</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Reporte de Guía de Revisión de Textos sobre Planificación y Entornos Educativos Mediados por TIC.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Qué es:</span> Revisión bibliográfica estructurada.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Materiales:</span> Guías didácticas MINERD, recursos de UASD Virtual.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Propósito:</span> Comprender las fases para la planificación de la enseñanza moderna y el perfil del docente de informática.</div>
+                    </div>
+                    <button onclick="openModal('Unidad 2')" class="w-full bg-white border-2 border-uasdBlue text-uasdBlue font-semibold py-2 rounded-lg hover:bg-uasdBlue hover:text-white transition">
+                        <i class="fas fa-link mr-2"></i>Ver Documentos
+                    </button>
+                </div>
+
+                <!-- UNIDAD 3 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 card-hover transition duration-300 flex flex-col h-full">
+                    <div class="bg-uasdBlue text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-md inline-block self-start mb-4">Unidad 3</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Sujeto de la Educación: El Estudiante</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Caracterización de adolescentes y análisis de deberes/derechos estudiantiles.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Qué es:</span> Reporte doble normativo y psicosocial.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Materiales:</span> Manual de Normas de Convivencia MINERD, Diseños Curriculares.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Propósito:</span> Identificar las características socioculturales de los estudiantes para una pedagogía empática y normativa.</div>
+                    </div>
+                    <button onclick="openModal('Unidad 3')" class="w-full bg-white border-2 border-uasdBlue text-uasdBlue font-semibold py-2 rounded-lg hover:bg-uasdBlue hover:text-white transition">
+                        <i class="fas fa-link mr-2"></i>Ver Documentos
+                    </button>
+                </div>
+
+                <!-- UNIDAD 4 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 card-hover transition duration-300 flex flex-col h-full">
+                    <div class="bg-uasdBlue text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-md inline-block self-start mb-4">Unidad 4</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Adecuación Curricular MINERD</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Revisión bibliográfica y cuadro comparativo entre el currículo tradicional y la adecuación 2023.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Qué es:</span> Análisis profundo de documentos oficiales y foro reflexivo.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Materiales:</span> Archivos PDF MINERD (Primaria/Secundaria), Procesadores de Texto.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Propósito:</span> Diferenciar los enfoques pedagógicos e integrar las TIC en el diseño actual.</div>
+                    </div>
+                    <button onclick="openModal('Unidad 4')" class="w-full bg-white border-2 border-uasdBlue text-uasdBlue font-semibold py-2 rounded-lg hover:bg-uasdBlue hover:text-white transition">
+                        <i class="fas fa-link mr-2"></i>Ver Documentos
+                    </button>
+                </div>
+
+                <!-- UNIDAD 5 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 card-hover transition duration-300 flex flex-col h-full">
+                    <div class="bg-uasdBlue text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-md inline-block self-start mb-4">Unidad 5</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Planificación Educativa</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Elaboración práctica de planificaciones (Anual, Unidad, Diaria) y sustentación en video.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Qué es:</span> Proyecto práctico de diseño de clases integrando TIC.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Materiales:</span> Guía "Construyo mi Planificación", YouTube, Herramientas TIC.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Propósito:</span> Desarrollar habilidades prácticas para la gestión del aula y el proceso de enseñanza-aprendizaje.</div>
+                    </div>
+                    <button onclick="openModal('Unidad 5')" class="w-full bg-white border-2 border-uasdBlue text-uasdBlue font-semibold py-2 rounded-lg hover:bg-uasdBlue hover:text-white transition">
+                        <i class="fas fa-link mr-2"></i>Ver Documentos
+                    </button>
+                </div>
+
+                <!-- UNIDAD 6 & 7 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 card-hover transition duration-300 flex flex-col h-full">
+                    <div class="bg-uasdBlue text-white text-sm font-bold uppercase tracking-wider py-1 px-3 rounded-md inline-block self-start mb-4">Unidad 6 y 7</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Conceptos Generales del Currículum</h3>
+                    <p class="text-gray-600 text-sm mb-4 flex-grow">Mesa de trabajo, observación en el aula y evolución histórica del sistema.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Qué es:</span> Reporte de mesa de trabajo y consolidación de conocimientos.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Materiales:</span> Instrumentos de observación del nivel primario, Rúbricas.</div>
+                        <div class="text-sm"><span class="font-semibold text-uasdBlue">Propósito:</span> Entender la Práctica Docente a través de la observación directa y la evolución sistémica de la educación.</div>
+                    </div>
+                    <button onclick="openModal('Unidades 6 y 7')" class="w-full bg-white border-2 border-uasdBlue text-uasdBlue font-semibold py-2 rounded-lg hover:bg-uasdBlue hover:text-white transition">
+                        <i class="fas fa-link mr-2"></i>Ver Documentos
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCLUSIÓN & EXPERIENCIA -->
+    <section id="conclusion" class="py-20 bg-uasdBlue text-white relative overflow-hidden">
+        <!-- Background Decorations -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-800 opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-900 opacity-50"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Conclusión -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <h2 class="text-3xl font-bold mb-6 flex items-center text-uasdGold">
+                        <i class="fas fa-flag-checkered mr-3"></i> Conclusión
+                    </h2>
+                    <div class="space-y-4 text-gray-100">
+                        <p><strong>Aprendizajes obtenidos:</strong> He logrado consolidar mis competencias en el manejo del diseño curricular actual, aprendiendo a desglosar indicadores de logro, competencias específicas y fundamentales para estructurar planificaciones coherentes (Anual, Unidad y Diaria).</p>
+                        
+                        <p><strong>Expectativas cumplidas:</strong> Absolutamente. Mis dudas iniciales sobre la aplicación práctica del currículo se disiparon gracias a los ejercicios prácticos de adecuación y simulaciones de aula.</p>
+                        
+                        <p><strong>Fortalezas del curso:</strong> La profunda integración de herramientas TIC en cada asignación y la exigencia metodológica que nos obliga a actuar como verdaderos profesionales.</p>
+                        
+                        <div class="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
+                            <h4 class="font-bold text-uasdGold mb-2"><i class="fas fa-star mr-1"></i> Desempeño de la Maestra</h4>
+                            <p class="text-sm">La maestra Anny B. Fernández Acosta mostró un desempeño excelente. Su acompañamiento fue constante, proporcionando retroalimentación precisa a través de rúbricas claras. Su dominio en la Didáctica de la Informática hizo que los contenidos teóricos se volvieran aplicables y dinámicos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experiencia -->
+                <div id="experiencia" class="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                    <h2 class="text-3xl font-bold mb-6 flex items-center text-uasdGold">
+                        <i class="fas fa-heart mr-3"></i> Experiencia Vivida
+                    </h2>
+                    <div class="space-y-4 text-gray-100">
+                        <p><strong>¿Cómo me sentí?</strong> Me sentí inmensamente motivado, aunque en ocasiones desafiado por la rigurosidad de los esquemas del MINERD. Fue un semestre de trabajo arduo pero gratificante.</p>
+                        
+                        <p><strong>Retos enfrentados:</strong> El mayor conflicto fue adaptar la teoría abstracta del currículo a una planificación de unidad diaria real, comprendiendo la diferencia entre los distintos tipos de competencias y cómo evaluarlas adecuadamente sin perder la esencia informática.</p>
+                        
+                        <p><strong>Crecimiento personal:</strong> Desarrollé un sentido crítico respecto a la educación dominicana. Ahora no solo veo la clase como un lugar para "enseñar computadoras", sino como un espacio para formar ciudadanos integrales utilizando la tecnología como medio.</p>
+                        
+                        <div class="mt-6 p-4 bg-uasdGold/20 rounded-lg border border-uasdGold/50">
+                            <h4 class="font-bold text-white mb-2"><i class="fas fa-gem mr-1"></i> El mayor aprendizaje</h4>
+                            <p class="text-sm">"El docente de informática no es un simple técnico; es un mediador del conocimiento que utiliza las TIC para empoderar a sus alumnos en la resolución de problemas reales, siempre sustentado en una planificación excelente."</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center px-4">
+        <p>© 2026 Creado por Kalashnikov Bello Gómez, estudiante de Informática Educativa, Desarrollador y Analista de Datos.</p>
+        <p class="text-sm mt-2">Facultad de Ciencias de la Educación | UASD</p>
+        <div class="mt-4">
+            <a href="https://deshcode.com" target="_blank" class="inline-flex items-center text-uasdGold hover:text-white font-semibold transition duration-300">
+                <i class="fas fa-globe mr-2"></i> Visita mi perfil en deshcode.com
+            </a>
+        </div>
+    </footer>
+
+    <!-- Custom Modal for simulated Drive Links -->
+    <div id="documentModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-transform duration-300" id="modalContent">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-blue-100 text-uasdBlue rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fab fa-google-drive text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2" id="modalTitle">Unidad X</h3>
+                <p class="text-gray-600 mb-6 text-sm">Haz clic en los documentos para abrirlos en Google Drive:</p>
+                
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6 text-left max-h-60 overflow-y-auto" id="modalFiles">
+                    <!-- Files will be injected here -->
+                </div>
+
+                <div class="flex justify-center">
+                    <button onclick="closeModal()" class="w-full bg-gray-200 text-gray-800 font-bold py-3 rounded-lg hover:bg-gray-300 transition">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Configuración de Archivos por Unidad (Para Google Drive)
+        // INSTRUCCIONES: Reemplaza el "#" con el enlace real de tu archivo en Google Drive.
+        const unitFiles = {
+            'Unidad 1': [
+                { name: 'Tarea 1.1 Cómo se enseña la Informática', icon: 'fa-file-word', url: 'https://docs.google.com/document/d/1O8ArwzU18iUkqWiRweQA5vQ18ANZJL1-5owJz4SB3hY/edit?usp=drive_link' },
+                { name: 'Relatoría - 6 de Febrero 2026', icon: 'fa-file-word', url: 'https://docs.google.com/document/d/1-CWbADxxn603BrFEH_FPyvH2Tl4MfyozMqC3REE52P8/edit?usp=drive_link' },
+                { name: 'Foro 1 - ¿Qué es la informática?', icon: 'fa-comments', url: 'https://docs.google.com/document/d/1z0GstmTxxeHqgLsHWGW3x2g8CG1jOH4gy0Rnzx_ejlk/edit?usp=drive_link' }
+            ],
+            'Unidad 2': [
+                { name: 'Tarea 2.1 Reporte Guía de Revisión de Textos', icon: 'fa-file-word', url: 'https://docs.google.com/document/d/1WzneiLGubfE6d0LzWZ1jfriXX2cD9LYVW0mQ_CpCLMI/edit?usp=drive_link' },
+                { name: 'El Docente de la Informática (PDF)', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/13TvhQ4fbec4L16KyPl4VYLoDBcN9Sp0M/view?usp=drive_link' },
+                { name: 'Políticas Educativas TIC (PDF)', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/1pCZbq2cr1KVvt0W3snYPRikwWc4Gm7OH/view?usp=drive_link' },
+                { name: 'Foro 2.2 - El docente excelente', icon: 'fa-comments', url: 'https://docs.google.com/document/d/1RNUWBUw7QTYVxe9BPD_E1qRD4i808NBu4dxNxENG9RY/edit?usp=drive_link' }
+            ],
+            'Unidad 3': [
+                { name: 'Tarea 3.1 Deberes y Derechos de los Estudiantes', icon: 'fa-file-word', url: 'https://docs.google.com/document/d/1pwY-JqzElk7HkF86ycL2fwI-jclhuYuhxpcDd0Z0QxU/edit?usp=drive_link' },
+                { name: 'Tarea 3.2 Caracterización de los adolescentes', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/14jZzZW9PDmQj3YD4XnzNg1lbCmOt2Qxj/view?usp=drive_link' },
+                { name: 'Normas de convivencia (PDF)', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/1WzxpdgV9AtXN1CUyfdEne-_2yoeM1STk/view?usp=drive_link' },
+                { name: 'Foro 3.1 Estilos de Aprendizaje', icon: 'fa-comments', url: 'https://docs.google.com/document/d/1KKRKk49HTZygaodQLdgwKEh6FBqxacQ03ZVNAPcIjjA/edit?usp=drive_link' }
+            ],
+            'Unidad 4': [
+                { name: 'Tarea 4 Revisión Bibliográfica de Contenidos', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/1uPMw8KWUahgPAI5QTMRvTmWRZqcDYCcc/view?usp=drive_link' },
+                { name: 'Extracto: Evolución del Modelo Curricular', icon: 'fa-file-alt', url: 'https://docs.google.com/document/d/1c3Dq270aTuruSsnLgO0Vff445rc1sgaWDmJ_GkQ3HnY/edit?usp=drive_link' },
+                { name: 'Foro 4.1 La informática en la Educación dominicana', icon: 'fa-comments', url: 'https://docs.google.com/document/d/1l5YO3HwG6MtseIRTMvZsklSg2vyc-IfcEdXC14e_jJ4/edit?usp=drive_link' }
+            ],
+            'Unidad 5': [
+                { name: 'Tarea 5 Planificación Educativa (Anual, Unidad, Diaria)', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/1hE4A0cadJhR4Mu1QE4PgJ2LGFt-CV5kL/view?usp=drive_link' },
+                { name: 'Material de Práctica', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/1M1NtZmXqH-As_dEjQHWY8EsiLBudn_EB/view?usp=drive_link' },
+                { name: 'Tarea Video Planificación', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/1wlbjGyvtOaIDrSUYnowar1Uz5V_CFcTd/view?usp=drive_link' }
+            ],
+            'Unidades 6 y 7': [
+                { name: 'Ensayo - Los Diversos Enfoques (Unidad 6)', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/1KO6q1cu_3VvYer-I3fRcCVdR8FQl7Vu9/view?usp=drive_link' },
+                { name: 'Foro: Reflexión Entrevista (Unidad 6)', icon: 'fa-comments', url: 'https://docs.google.com/document/d/1mF-WpnjLj01Dx9DdNuqq7FxYQQisYGJSvReQEm-qPxM/edit?usp=drive_link' },
+                { name: 'Unidad 7: Conceptos Generales del Currículum', icon: 'fa-file-word', url: 'https://docs.google.com/document/d/1Vi6HYdOfuRAJ9U_XWcHDYis1SMKS-kkatANyjKEnbv4/edit?usp=drive_link' },
+                { name: 'Presentación: Práctica y Observación Docente', icon: 'fa-file-pdf', url: 'https://drive.google.com/file/d/1cWbkTpcbcCeNNrPYWW9-pFTgmg_efpYy/view?usp=drive_link' },
+                { name: 'Foro Unidad 7: Reflexión sobre observación', icon: 'fa-comments', url: 'https://docs.google.com/document/d/1KlUunXIW7ZWfRwbs80CE9tlEJztzBkMzX1mzf_v4LG0/edit?usp=drive_link' }
+            ]
+        };
+
+        // Modal Logic (Simulating opening documents)
+        const modal = document.getElementById('documentModal');
+        const modalInner = document.getElementById('modalContent');
+        
+        function openModal(unitKey) {
+            document.getElementById('modalTitle').innerText = unitKey;
+            
+            const files = unitFiles[unitKey] || [];
+            let filesHTML = '';
+            
+            files.forEach(file => {
+                filesHTML += `
+                    <a href="${file.url}" target="_blank" class="block bg-white hover:bg-blue-50 border border-gray-200 p-4 rounded-xl mb-3 transition duration-300 shadow-sm hover:shadow-md group flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-uasdBlue flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                            <i class="fas ${file.icon} text-lg"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-bold text-gray-800">${file.name}</h4>
+                            <p class="text-xs text-gray-500 mt-1"><i class="fas fa-link mr-1"></i>Clic para abrir en Google Drive</p>
+                        </div>
+                        <i class="fas fa-external-link-alt text-gray-300 group-hover:text-uasdBlue transition-colors"></i>
+                    </a>
+                `;
+            });
+
+            document.getElementById('modalFiles').innerHTML = filesHTML;
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalInner.classList.remove('scale-95');
+                modalInner.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modalInner.classList.remove('scale-100');
+            modalInner.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
